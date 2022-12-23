@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-.container {
+main {
     width: 100%;
     height: 100vh; 
     position: relative;
@@ -23,23 +23,25 @@
     background-color: lightcoral;
 }
 
-.slides {
-    width: 100%;
-    height: 100%;
-}
-
 .slide {
     width: 100%;
     height: 100%;
+    display: none;
 }
 
-.controls {
+.slide img {
+    width: 100%;
     height: 100%;
-    position: absolute;
-    left: 50%;
+    object-fit: cover;
+    object-position: top;
 }
 
-.circle {
+.current {
+    display: block;
+}
+
+
+#circle-up {
     background-color: rgba(255, 255, 255, 0.7);
     height: 20px;
     width: 20px;
@@ -48,19 +50,31 @@
     text-align: center;
     font-size: 0.5rem;
     border: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
 }
 
-.circle:hover {
+#circle-down {
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 0.5rem;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+
+.circle-up:hover {
     background-color: rgba(255, 255, 255, 1);
     cursor: pointer;
 }
 
-.up {
-    position: absolute;
-    top: 0;
-}
-
-.down {
-    position: absolute;
-    bottom: 0;
+.circle-down:hover {
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
 }
